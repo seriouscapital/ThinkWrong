@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Think Wrong Intensives – Internal Selling Kit</title>
+<style>
+:root{--pink:#ff0099;--black:#000;--white:#fff;--off:#f2f2f2;--ai:#1a1464;--border:#e0e0e0;--mid:#777;--ink:#111;--green:#1a5c2a;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:var(--ink);background:var(--white);}
+a{color:var(--pink);}
+
+.cover{background:var(--black);padding:60px;min-height:55vh;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:var(--pink);opacity:0.07;}
+.cover-brand{font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+.cover-brand span{color:var(--pink);}
+.cover-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--pink);margin:40px 0 16px;}
+.cover-title{font-size:clamp(38px,6vw,72px);font-weight:900;line-height:0.92;letter-spacing:-0.04em;text-transform:uppercase;color:var(--white);margin-bottom:24px;}
+.cover-title span{color:var(--pink);}
+.cover-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,0.90);max-width:540px;line-height:1.7;}
+.cover-footer{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-top:48px;}
+
+.nav{background:var(--pink);position:sticky;top:0;z-index:100;display:flex;align-items:center;padding:0 60px;height:44px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav a{font-size:8.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);padding:0 14px;height:44px;display:flex;align-items:center;flex-shrink:0;}
+.nav a:hover{background:rgba(0,0,0,0.15);}
+
+.section{padding:72px 60px;}
+.section-dark{background:var(--black);color:var(--white);}
+.section-alt{background:var(--off);}
+.tag{font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--pink);margin-bottom:10px;display:block;}
+h2.st{font-size:clamp(24px,3.5vw,40px);font-weight:900;line-height:0.95;letter-spacing:-0.03em;text-transform:uppercase;color:var(--black);margin-bottom:14px;}
+.section-dark h2.st{color:var(--white);}
+h3.sh{font-size:17px;font-weight:700;color:var(--black);margin-bottom:10px;line-height:1.3;}
+.section-dark h3.sh{color:var(--white);}
+.lead{font-size:15px;font-weight:300;line-height:1.7;color:#222;max-width:680px;margin-bottom:36px;}
+.section-dark .lead{color:rgba(255,255,255,0.92);}
+.divider{height:1px;background:var(--border);margin:36px 0;}
+.section-dark .divider{background:rgba(255,255,255,0.10);}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:28px;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}.section,.cover,.nav{padding-left:24px;padding-right:24px;}.cover{padding:40px 24px;}}
+
+.card{border-top:3px solid var(--pink);padding:18px 0 0;}
+.card-title{font-size:14px;font-weight:700;color:var(--black);margin-bottom:7px;}
+.section-dark .card-title{color:var(--white);}
+.card-body{font-size:13px;color:#222;line-height:1.65;}
+.section-dark .card-body{color:rgba(255,255,255,0.88);}
+
+/* Content boxes — different types */
+.box{padding:22px 24px;margin:14px 0;font-size:14px;line-height:1.75;color:#222;}
+.box-template{background:var(--off);border-left:3px solid var(--pink);}
+.box-email{background:#f0fff4;border-left:3px solid var(--green);}
+.box-brief{background:#fff8f0;border-left:3px solid #c85a00;}
+.box-roi{background:#f0f4ff;border-left:3px solid var(--ai);}
+.box-label{font-size:8px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;margin-bottom:10px;display:block;}
+.box-label.pink{color:var(--pink);}
+.box-label.green{color:var(--green);}
+.box-label.orange{color:#c85a00;}
+.box-label.ai{color:var(--ai);}
+.box strong{font-weight:700;color:var(--black);}
+.box em{color:var(--mid);font-style:italic;}
+.box hr{border:none;border-top:1px solid #ddd;margin:14px 0;}
+.box p{margin-bottom:12px;}
+.box p:last-child{margin-bottom:0;}
+
+/* ROI table */
+.roi-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:24px;}
+.roi-table th{text-align:left;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);padding:10px 14px;border-bottom:2px solid var(--border);}
+.roi-table td{padding:13px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+.roi-table tr:last-child td{border-bottom:none;}
+.roi-num{font-size:18px;font-weight:900;color:var(--pink);}
+
+/* Programme selector */
+.prog-select{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.prog-pill{background:var(--off);border:1px solid var(--border);padding:6px 14px;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);border-radius:2px;}
+
+/* Outcomes grid */
+.outcome-row{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+.outcome-day{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);padding-top:2px;}
+.outcome-body{font-size:13px;color:#111;line-height:1.65;}
+.outcome-body strong{color:var(--black);}
+/* Dark section overrides for outcome rows */
+.section-dark .outcome-body{color:rgba(255,255,255,0.90);}
+.section-dark .outcome-body strong{color:#fff;}
+.section-dark .outcome-day{color:var(--pink);}
+
+
+.footer{background:var(--black);padding:24px 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer span{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.85);}
+
+/* ── DOWNLOAD BANNER ── */
+.dl-banner {
+  background: #111;
+  border-bottom: 1px solid rgba(255,0,153,0.25);
+  padding: 11px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.dl-banner-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.dl-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,0,153,0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dl-icon svg { display: block; }
+.dl-text-wrap {}
+.dl-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 2px;
+}
+.dl-title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+}
+.dl-sub {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 300;
+  margin-top: 1px;
+}
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff0099;
+  color: #fff !important;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 2px solid #ff0099;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.dl-btn:hover { background: transparent; color: #ff0099 !important; }
+.dl-btn svg { display: block; flex-shrink: 0; }
+
+/* Floating button on mobile */
+.dl-float {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #ff0099;
+  color: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255,0,153,0.5);
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .dl-banner { padding: 12px 20px; }
+  .dl-sub { display: none; }
+  .dl-float { display: flex; }
+}
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="cover-brand">Solve<span>Next</span>  ·  Think Wrong</div>
+<div>
+<div class="cover-eyebrow">Internal Selling Kit  ·  For Participants</div>
+<h1 class="cover-title">How to get<br/><span>approved.</span></h1>
+<p class="cover-sub">Everything a prospective participant needs to make the case to their manager, their L&amp;D team, or their CFO—from a one-line justification to a full business case. Adapt, personalise, and send.</p>
+<p class="cover-footer"><a class="__cf_email__" data-cfemail="28404d444447685b47445e4d464d505c064b4745" href="/cdn-cgi/l/email-protection">[email protected]</a>  ·  solvenext.com</p>
+</div>
+</div>
+<nav class="nav">
+<a href="#why">Why this works</a>
+<a href="#oneliner">The one-liner</a>
+<a href="#email">Manager email</a>
+<a href="#brief">One-page brief</a>
+<a href="#roi">ROI framing</a>
+<a href="#outcomes">What comes back</a>
+<a href="#team">Team proposal</a>
+<a href="#objections">Objections</a>
+<a href="#archetypes">Who you are</a><a href="#programmes">By programme</a>
+</nav>
+<div class="dl-banner">
+<div class="dl-banner-info">
+<div class="dl-icon">
+<svg fill="none" height="16" viewbox="0 0 14 16" width="14" xmlns="http://www.w3.org/2000/svg">
+<rect height="10" rx="0" stroke="#ff0099" stroke-width="1.2" width="8" x="1" y="1"></rect>
+<path d="M9 1L13 5V15H5V13" stroke="#ff0099" stroke-width="1.2"></path>
+<path d="M9 1V5H13" stroke="#ff0099" stroke-width="1.2"></path>
+<path d="M3 10V14M1 12H5" stroke="#ff0099" stroke-width="1.2"></path>
+</svg>
+</div>
+<div class="dl-text-wrap">
+<div class="dl-label">Downloadable Resource · PDF</div>
+<div class="dl-title">Individual Selling Kit</div>
+<div class="dl-sub">For leaders and managers making the case for personal attendance.</div>
+</div>
+</div>
+<a class="dl-btn" download="ThinkWrong_Individual_Selling_Kit.pdf" href="TW_Internal_Selling_Kit.pdf">
+<svg fill="none" height="13" viewbox="0 0 11 13" width="11" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 1V9M5.5 9L2.5 6M5.5 9L8.5 6" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M1 11H10" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+    Download PDF
+  </a>
+</div>
+<a class="dl-float" download="ThinkWrong_Individual_Selling_Kit.pdf" href="TW_Internal_Selling_Kit.pdf" title="Download PDF">
+<svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 1V11M8 11L4 7M8 11L12 7" stroke="white" stroke-width="1.8"></path>
+<path d="M1 13.5H15" stroke="white" stroke-width="1.8"></path>
+</svg>
+</a>
+<!-- WHY -->
+<section class="section section-dark" id="why">
+<span class="tag">How to use this kit</span>
+<h2 class="st">The internal sell<br/>is often harder<br/>than the decision itself.</h2>
+<p class="lead">The four decision types where untested assumptions are most expensive are specific: AI deployments, growth bets, market entries, and transformation initiatives. If you are navigating any of these right now—or will be in the next quarter—this kit gives you everything needed to make the case for attendance. The programme develops four specific, practiced capabilities that you bring back and apply to that decision immediately.</p>
+<div class="divider"></div>
+<div class="three-col">
+<div class="card">
+<div class="card-title">For a verbal conversation</div>
+<div class="card-body">Start with the one-liner and the ROI framing. Most managers will approve a development programme if the business case is clear and the investment fits the budget. The ROI section gives you the numbers.</div>
+</div>
+<div class="card">
+<div class="card-title">For a written request</div>
+<div class="card-body">Use the manager email template. Personalise the opening paragraph with the specific challenge your team is navigating. Attach the programme PDF. Keep it to one screen.</div>
+</div>
+<div class="card">
+<div class="card-title">For a formal approval process</div>
+<div class="card-body">Use the one-page brief. This is designed to be forwarded to an L&amp;D team, a budget approver, or a CFO as a standalone document. It answers the questions that approval processes ask before they ask them.</div>
+</div>
+<div class="card">
+<div class="card-title">For a team proposal</div>
+<div class="card-body">Use the team proposal template. It reframes the programme as a team development initiative—which is often easier to approve than individual attendance, and qualifies for the group rate of €4,000 per person.</div>
+</div>
+<div class="card">
+<div class="card-title">Handling objections</div>
+<div class="card-body">The objections section gives you responses to the four most common reasons managers hesitate: time, cost, relevance, and “we have our own training programmes.”</div>
+</div>
+<div class="card">
+<div class="card-title">Personalise everything</div>
+<div class="card-body">The most effective version of every asset here is the one that connects the programme directly to a specific challenge your team is facing right now. The bracketed placeholders are where your context goes.</div>
+</div>
+</div>
+<div style="margin-top:40px;background:rgba(255,255,255,0.05);border-top:3px solid var(--pink);padding:22px 24px;"><div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:8px;">You are already a Wrong Thinker.</div><div style="font-size:13px;color:rgba(255,255,255,0.72);line-height:1.7;">The Think Wrong book describes the people it was written for as Wrong Thinkers: deeply driven to make a difference, unable to accept the predictable path, and frustrated by how slow and difficult it is to create the change they can see. If you are reading this kit, you are one of them. The Intensive does not teach you to be a Wrong Thinker. It gives you the language, practices, and tools to do what you are already trying to do—more reliably, more effectively, and before the capital commits rather than after.</div><div style="font-size:13px;color:rgba(255,255,255,0.72);line-height:1.7;margin-top:10px;">The book explains why this is hard with neuroscience, not motivational language: synaptic pruning means the brain eliminates connections it rarely uses, leaving only the well-worn paths. Those paths produce the same answers. The six Think Wrong practices are designed to interrupt them at the specific moments when biology and culture conspire to pull you back to the predictable path.</div></div></section>
+<!-- ONE-LINER -->
+<section class="section section-white" id="oneliner">
+<span class="tag">Asset 01  ·  The one-liner</span>
+<h2 class="st">For a hallway conversation,<br/>a Slack message,<br/>or an opening line.</h2>
+<p class="lead">One sentence that frames the request, names the business case, and invites a conversation. Use in any informal context where you need to introduce the idea before following up with more detail.</p>
+<div class="divider"></div>
+<div class="box box-template">
+<span class="box-label pink">Universal version</span>
+<p>I want to attend a five-day methodology intensive in [LOCATION] that will give me a structured practice for testing the assumptions underneath our most important [GROWTH / TRANSFORMATION / AI] decisions—and I think it is worth discussing whether we should send a team of three to access the group rate.</p>
+</div>
+<h3 class="sh" style="margin-top:32px;">Programme-specific versions</h3>
+<div class="two-col">
+<div class="box box-template">
+<span class="box-label pink">Wine (Provence)</span>
+<p>The Think Wrong Wine Intensive uses the Provençal wine industry as a live laboratory for developing the practice of surfacing the assumptions underneath our growth strategy—I want to attend in June and bring two colleagues so we can apply it together when we return.</p>
+</div>
+<div class="box box-template">
+<span class="box-label pink">Arts (Paris)</span>
+<p>There is a leadership methodology intensive in Paris in June that uses the performing arts crisis as a mirror for the assumption failures in our own strategy—and I think attending with two colleagues would give us a shared language and practice to apply immediately.</p>
+</div>
+<div class="box box-template">
+<span class="box-label pink">Irish Whiskey</span>
+<p>The Irish whiskey industry’s current challenge—forty companies making the same confident bet on an untested assumption—is the clearest available mirror for the AI deployment decisions we are making right now, and I want to spend five days on the Wild Atlantic Way developing the practice of examining ours.</p>
+</div>
+<div class="box box-template">
+<span class="box-label pink">Automotive</span>
+<p>The Think Wrong Automotive Intensive uses the UK automotive industry’s simultaneous four-way disruption as the live case for developing the practice of reframing challenges before the capital commits—which is exactly what we need before the Q3 decision.</p>
+</div>
+<div class="box box-template">
+<span class="box-label pink">Mobility</span>
+<p>I want to attend an intensive in Amsterdam that uses the European mobility transition as the laboratory for developing a practice I can apply directly to the long-horizon investment decisions our team is making this year.</p>
+</div>
+<div class="box box-template">
+<span class="box-label pink">Drone Warfare</span>
+<p>Given the changes in the threat landscape over the last two years, I want to spend five days in Tallinn with NATO CCDCOE access developing a structured practice for examining which of our infrastructure and resilience planning assumptions are still sound—before our next round of capital commits.</p>
+</div>
+</div>
+</section>
+<!-- MANAGER EMAIL -->
+<section class="section section-alt" id="email">
+<span class="tag">Asset 02  ·  Manager email</span>
+<h2 class="st">The email to<br/>your manager.</h2>
+<p class="lead">A one-screen email that makes the business case, names the specific challenge, and proposes the group option. Personalise the first paragraph. The rest is ready to send.</p>
+<div class="divider"></div>
+<div class="box box-email">
+<span class="box-label green">Email template  ·  Personalise the first paragraph</span>
+<p><strong>Subject:</strong> Development programme request—Think Wrong [PROGRAMME NAME] Intensive, [LOCATION]</p>
+<hr/>
+<p>Hi [MANAGER NAME],</p>
+<p>I would like to request approval to attend the Think Wrong [PROGRAMME NAME] Intensive in [LOCATION], [DATES]. I am also recommending we consider sending [COLLEAGUE 1] and [COLLEAGUE 2]—at three participants we access the group rate, which brings the cost to €4,000 per person all-in including accommodation.</p>
+<p><strong>Why this programme specifically:</strong> [INSERT ONE SENTENCE CONNECTING THE PROGRAMME TO YOUR TEAM’S CURRENT CHALLENGE. E.g.: “We are three months away from committing significant budget to [INITIATIVE], and I want to develop the structured practice for testing the assumptions underneath it before that decision is made, not after.”]</p>
+<p><strong>What the programme produces:</strong> Four specific capabilities I will bring back and apply immediately—a structured method for framing the right challenge before committing resources, a faster way to generate and test hypotheses, a discipline for identifying which assumptions are highest-risk, and a facilitation practice I can run with the team. The week uses [INDUSTRY] as the laboratory. The capabilities are industry-agnostic.</p>
+<p><strong>The investment:</strong></p>
+<p>
+      Individual attendance (unbundled): €3,900 per person<br/>
+      Individual attendance (bundled, inc. accommodation): €4,500 per person<br/>
+<strong>Group rate (3 people, recommended): €4,000 per person all-in</strong><br/>
+      Total for three: €12,000 including accommodation, meals, and all sessions
+    </p>
+<p><strong>What I will bring back:</strong> A written summary within one week of returning—the three most consequential assumptions surfaced during the week that are relevant to [CURRENT INITIATIVE], the small tests I am proposing to examine them, and a 60-minute session with the team to apply the practice to our live challenge.</p>
+<p>I have attached the programme brief. Happy to discuss—let me know if you want to set up ten minutes.</p>
+<p>[YOUR NAME]</p>
+</div>
+</section>
+<!-- ONE-PAGE BRIEF -->
+<section class="section section-white" id="brief">
+<span class="tag">Asset 03  ·  One-page brief</span>
+<h2 class="st">The document for<br/>formal approval processes.</h2>
+<p class="lead">A standalone one-pager designed to be forwarded to an L&amp;D team, a budget committee, or a CFO. Answers the five questions every approval process asks. Adapt the programme-specific fields.</p>
+<div class="divider"></div>
+<div class="box box-brief" style="max-width:680px;">
+<span class="box-label orange">One-page approval brief  ·  Adapt and forward</span>
+<p><strong>Programme:</strong> Think Wrong [PROGRAMME NAME] Innovators Intensive<br/>
+<strong>Provider:</strong> Solve Next  ·  solvenext.com<br/>
+<strong>Location / dates:</strong> [LOCATION], [DATES]<br/>
+<strong>Duration:</strong> 4.5 days (arrival Sunday evening, departure Friday midday)<br/>
+<strong>Participants requested:</strong> [NAME(S)]<br/>
+<strong>Total investment:</strong> €[AMOUNT] [per person / for [N] people at group rate]</p>
+<hr/>
+<p><strong>What the programme is</strong></p>
+<p>An immersive Think Wrong Blitz—the format the methodology was designed for—applied to a live external industry at a visible deflection point. Develops four specific, practiced capabilities: (1) Framing the right challenge before solutions take hold. (2) Distinguishing what the organisation knows from what it believes. (3) Identifying which assumptions, if wrong, change a decision only the CFO can authorise. (4) Designing the smallest credible test that converts belief into evidence before capital commits. The industry is the laboratory. The capabilities transfer to any AI deployment, growth bet, market entry, or transformation initiative the participant is navigating on return.</p>
+<p><strong>Why this programme, at this time</strong></p>
+<p>[INSERT: the specific AI deployment, growth bet, market entry, or transformation initiative that makes this timely. E.g.: “Our team is preparing to commit €/£X to [INITIATIVE] in [QUARTER]. The primary risk in that decision is not execution capacity—it is whether the assumptions underlying the initiative have been adequately tested. This programme develops the specific practice for doing that before the capital commits, not after.”]</p>
+<p><strong>What participants will bring back</strong></p>
+<p>Each participant returns with: (1) four trained capabilities applicable immediately to live challenges; (2) a written assumption map for our current highest-priority initiative, developed during the Friday transfer session; (3) the facilitation capability to run structured assumption-testing sessions inside the organisation; and (4) the Certified Serious Capital Activator™ designation, earned as part of the programme credential pathway.</p>
+<p>How the investment compares + one year of Next Lab Professional access (€999 / $999 value)—the platform used during the week to access Think Wrong drills, design sessions and sprints, and track assumptions and learnings. Existing subscribers receive a one-year renewal.</p>
+<p>Equivalent executive development programmes at INSEAD, IMD, or London Business School run £5,500–£10,000 per person, excluding accommodation, for three to five days. The Think Wrong Intensive at €4,000–€4,500 all-in delivers comparable duration, significantly more applied fieldwork, and a specific methodology credential. The methodology is drawn from a book now in its third printing, published in English, Spanish, and Arabic—with a decade of application at Genentech, the White House, JP Morgan, Microsoft, and Airbus.</p>
+<p><strong>Contact for questions</strong></p>
+<p>Solve Next: <a class="__cf_email__" data-cfemail="fc9499909093bc8f93908a9992998488d29f9391" href="/cdn-cgi/l/email-protection">[email protected]</a>  ·  +1 415 209 5065</p>
+</div>
+</section>
+<!-- ROI FRAMING -->
+<section class="section section-alt" id="roi">
+<span class="tag">Asset 04  ·  ROI framing</span>
+<h2 class="st">The numbers that<br/>answer “is it worth it?”</h2>
+<p class="lead">Use these calculations in any conversation where the investment requires a financial justification. The logic is simple: one better decision, made on a tested rather than an assumed premise, produces far more value than the programme costs.</p>
+<div class="divider"></div>
+<table class="roi-table">
+<thead>
+<tr>
+<th>Decision type</th>
+<th>Typical at-stake value</th>
+<th>Cost of wrong assumption</th>
+<th>Programme cost</th>
+<th>ROI if one decision improves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI deployment decision</strong><br/><em>Building on wrong premise about use case or adoption</em></td>
+<td>€500K–€5M investment</td>
+<td>50–100% of investment if wrong premise not caught</td>
+<td>€4,000–€4,500 per person</td>
+<td class="roi-num">100–1,000×</td>
+</tr>
+<tr>
+<td><strong>Market entry or expansion</strong><br/><em>Entering a market on untested demand assumptions</em></td>
+<td>€1M–€20M</td>
+<td>Significant write-down if market assumption fails</td>
+<td>€4,000–€4,500 per person</td>
+<td class="roi-num">200–4,000×</td>
+</tr>
+<tr>
+<td><strong>Product or service launch</strong><br/><em>Solving the wrong version of the customer problem</em></td>
+<td>€200K–€2M development cost</td>
+<td>Cost of pivot or abandonment if wrong problem</td>
+<td>€4,000–€4,500 per person</td>
+<td class="roi-num">50–500×</td>
+</tr>
+<tr>
+<td><strong>Transformation programme</strong><br/><em>Redesigning a system built on assumptions that haven’t been examined</em></td>
+<td>€2M–€50M programme spend</td>
+<td>Programme delivers against wrong brief</td>
+<td>€4,000–€4,500 per person</td>
+<td class="roi-num">500–10,000×</td>
+</tr>
+<tr>
+<td><strong>Infrastructure or security investment</strong><br/><em>Planning assumptions not updated against current environment</em></td>
+<td>€1M–€100M</td>
+<td>Incident cost or rebuild cost if assumption fails</td>
+<td>€4,000–€4,500 per person</td>
+<td class="roi-num">Variable, significant</td>
+</tr>
+<tr><td><strong>Next Lab Professional</strong><br/><em>Platform access for Think Wrong drills, session design, assumption tracking</em></td><td><strong>€999 / $999 per participant</strong><br/>1-year subscription value</td><td>Included in every programme format. No separate cost. Existing subscribers receive a renewal at no additional charge.</td></tr></tbody>
+</table><div class="box box-roi" style="margin-top:24px;"><span class="box-label ai">10th Anniversary + Third Printing—Proof of durability</span><p>Think Wrong: How to Conquer the Status Quo was published in 2016. It is now in its third printing (2025) and has been translated into Spanish and Arabic in addition to the original English edition. Third printing means sustained demand across a decade—unusual for a methodology book and a signal that practitioners are buying it for ongoing use, not novelty. Spanish and Arabic translations mean the methodology has been validated across significantly different cultural and organisational contexts, not just Northern California design thinking. The case studies in the book—Genentech, the White House, SodaStream, Microsoft, JP Morgan—are a decade old. They are not claims about what the methodology might produce. They are evidence of what it has produced, at scale, in three languages, across three print runs.</p></div><div class="box box-roi" style="margin-top:16px;"><span class="box-label ai">LFI—the reframe that wins L&amp;D conversations</span><p>The ROI table above is the right tool for CFO conversations. For L&amp;D and manager conversations, a different frame works better: LFI—Learn From Investment.</p><p>The Think Wrong book introduced LFI as the explicit alternative to ROI. ROI thinks in binary terms: worked or didn’t work, right or wrong. This is why most development programmes lose the approval conversation—they cannot guarantee a measurable return. LFI reframes the question: the goal is discovery, not being right. The week’s value is not a return calculated after the fact. It is the assumptions surfaced and tested before the capital commits, not after it does.</p><p style="font-style:italic;color:#444;">“This is not an ROI calculation. It is a Learn From Investment. The question is not whether the week pays back in measurable terms. The question is whether the assumptions we test during the week are worth testing before the budget commits—not after.”</p></div>
+<div class="box box-roi" style="margin-top:32px;">
+<span class="box-label ai">The simple version—for a verbal conversation</span>
+<p>The programme costs €4,000–€4,500 per person. If attending produces even one better decision—one assumption surfaced and tested before the budget commits that would otherwise have been discovered after—the programme pays for itself in the first week back. For any decision above €100,000, the maths are not close.</p>
+<p>The question is not whether the programme is worth the investment. The question is whether this is the right time to develop this practice, and whether this is the right programme for it.</p>
+</div>
+</section>
+<!-- WHAT COMES BACK -->
+<section class="section section-dark" id="outcomes">
+<span class="tag">Asset 05  ·  What I will bring back</span>
+<h2 class="st">What goes home<br/>from each day.</h2>
+<p class="lead">Use this section to describe specific, concrete deliverables to your manager before you attend. Managers approve programmes more readily when the output is specific rather than general.</p>
+<div class="divider"></div>
+<div class="outcome-row">
+<div class="outcome-day">Day 1—Monday</div>
+<div class="outcome-body">Capability 1 in practice: a reframed version of the challenge you are working on—not the problem as it was presented, but the problem as the evidence suggests it actually is. Applied live to the industry on Monday. Applied to your own [AI DEPLOYMENT / GROWTH BET / MARKET ENTRY / TRANSFORMATION] during the week’s transfer sessions.</div>
+</div>
+<div class="outcome-row">
+<div class="outcome-day">Day 2—Tuesday</div>
+<div class="outcome-body">Capability 2 in practice: a Certainty Map for your most important current decision. Every significant belief underlying [CURRENT INITIATIVE] classified as Presumption, Assumption, or Knowledge. This is typically the most immediately useful output of the week—because most senior leaders have never formally mapped what they know against what they assume on a live high-stakes decision.</div>
+</div>
+<div class="outcome-row">
+<div class="outcome-day">Day 3—Wednesday</div>
+<div class="outcome-body">Capability 3 in practice: the three assumptions that matter most, ranked by capital consequence. Specifically: the beliefs that, if false, would change a decision only the CFO or CEO can authorise. Named. Ranked. Each accompanied by a proposed evidence-gathering action.</div>
+</div>
+<div class="outcome-row">
+<div class="outcome-day">Day 4—Thursday</div>
+<div class="outcome-body">Capability 4 in practice: the small bet designed to test the highest-consequence assumption. Concrete, bounded by affordable loss, executable within thirty days of returning. Not a pilot. Not a survey. The smallest action that produces genuine signal on the most consequential unknown before the next capital decision depends on it.</div>
+</div>
+<div class="outcome-row">
+<div class="outcome-day">Day 4 evening</div>
+<div class="outcome-body">The escalation question, answered. Of all the assumptions surfaced across the week—which ones, if wrong, would change a decision only the CFO or CEO can authorise? This is the output that determines what conversation to have on the first Monday back.</div>
+</div>
+<div class="outcome-row">
+<div class="outcome-day">Day 5—Friday</div>
+<div class="outcome-body">The transfer session. Every capability from the week applied directly to the participant’s own [AI DEPLOYMENT / GROWTH BET / MARKET ENTRY / TRANSFORMATION]. The output: a tested assumption map, a designed small bet, and a facilitation-ready version of the methodology that can be run with the team in the first month back.</div>
+</div>
+<div style="margin-top:40px; background:rgba(255,255,255,0.05); border-top:3px solid var(--pink); padding:24px;">
+<div style="font-size:13px; font-weight:700; color:var(--white); margin-bottom:10px;">What I commit to delivering within 30 days of returning</div>
+<div style="font-size:13px; color:rgba(255,255,255,0.72); line-height:1.7;">
+      1. A written summary of the three most consequential assumptions identified—and the small tests proposed for each<br/>
+      2. A 60-minute assumption-testing session with the team, facilitated using the methodology from the week<br/>
+      3. A recommendation on whether any of the escalation question answers warrant a conversation with [MANAGER/CFO]
+    </div>
+</div>
+</section>
+<!-- TEAM PROPOSAL -->
+<section class="section section-white" id="team">
+<span class="tag">Asset 06  ·  Team proposal</span>
+<h2 class="st">When you are<br/>proposing for<br/>a team of three.</h2>
+<p class="lead">Three or more participants from the same organisation qualify for the group rate of €4,000 all-in. This template reframes the programme as a team development initiative—which is often easier to approve and produces faster internal application on return.</p>
+<div class="divider"></div>
+<div class="box box-email">
+<span class="box-label green">Team proposal  ·  For manager or L&amp;D approval</span>
+<p><strong>Programme:</strong> Think Wrong [PROGRAMME NAME] Intensive  ·  [LOCATION]  ·  [DATES]</p>
+<p><strong>Proposed participants:</strong> [NAME 1], [NAME 2], [NAME 3]</p>
+<p><strong>Total investment:</strong> €12,000 (group rate €4,000 per person all-in, including accommodation, meals, and all sessions)</p>
+<hr/>
+<p><strong>The case for sending a team rather than an individual</strong></p>
+<p>Individual attendance produces capability. Team attendance produces a shared practice. When three people from the same organisation return with the same methodology and language, the application compounds—they can run assumption-testing sessions with each other, challenge each other’s framing, and hold each other accountable to the small bets designed during the week.</p>
+<p>The group rate also produces a meaningful financial difference: three people at €4,000 each (€12,000 total) versus three individual bookings at €4,500 each (€13,500)—a saving of €1,500 on identical programme access.</p>
+<hr/>
+<p><strong>Why this team, at this time</strong></p>
+<p>[INSERT: the specific shared challenge or initiative that makes this team composition sensible. E.g.: “All three of us are involved in the [INITIATIVE] decision scheduled for [QUARTER]. We want to develop the assumption-testing practice together and apply it immediately to that decision—which involves a commitment of approximately €[AMOUNT] on premises that have not been tested against evidence.”]</p>
+<hr/>
+<p><strong>What we will produce collectively within 60 days</strong></p>
+<p>
+      Week 1 back: Individual assumption maps for [CURRENT INITIATIVE], shared and consolidated as a team<br/>
+      Week 2 back: A joint team session applying the methodology to our most important live decision<br/>
+      Month 2: A recommendation to [MANAGER/CFO] on whether any escalation-level assumptions require a broader conversation
+    </p>
+<hr/>
+<p><strong>Next step:</strong> Confirm group booking with <a class="__cf_email__" data-cfemail="19717c757576596a76756f7c777c616d377a7674" href="/cdn-cgi/l/email-protection">[email protected]</a> by [DATE] to secure three places at the group rate.</p>
+</div>
+</section>
+<!-- OBJECTIONS -->
+<section class="section section-alt" id="objections">
+<span class="tag">Asset 07  ·  Handling objections</span>
+<h2 class="st">The four objections.<br/>And how to answer them.</h2>
+<p class="lead">These are the four most common reasons a manager hesitates to approve a development programme of this kind. Each one has a direct, honest response.</p>
+<div class="divider"></div>
+<div class="two-col">
+<div>
+<h3 class="sh">Objection 1: “We can’t afford five days away right now.”</h3>
+<div class="box box-template">
+<span class="box-label pink">Response</span>
+<p>The programme runs Sunday evening to Friday midday—four working days, not five. The Friday session is a half-day that produces the most immediately applicable output of the week: a transfer plan for [CURRENT INITIATIVE] and a facilitation-ready assumption map.</p>
+<p>The question is whether four working days is a reasonable investment to improve the quality of a decision with [€X] at stake. If the decision is over €100,000, the maths are straightforward.</p>
+</div>
+</div>
+<div>
+<h3 class="sh">Objection 2: “The cost is too high for a training programme.”</h3>
+<div class="box box-template">
+<span class="box-label pink">Response</span>
+<p>The cost is €4,000–€4,500 per person all-in including accommodation. Comparable duration programmes at INSEAD and IMD run £5,500–£10,000 per person, excluding accommodation.</p>
+<p>More importantly, the question is not whether the programme is expensive relative to other programmes. It is whether the capability it develops is worth the cost relative to the decisions it will be applied to. One better decision on a €500,000 initiative produces a return of more than 100 times the programme cost.</p>
+</div>
+</div>
+<div>
+<h3 class="sh">Objection 3: “I’m not sure how this is relevant to our work.”</h3>
+<div class="box box-template">
+<span class="box-label pink">Response</span>
+<p>The [INDUSTRY] used in the programme is not the point—it is the medium through which a specific discipline is developed. The discipline is: framing challenges correctly before committing resources, identifying the assumptions with the highest risk if wrong, and designing the smallest possible tests before the capital commits.</p>
+<p>This discipline is directly applicable to [SPECIFIC CURRENT CHALLENGE]. I can outline exactly how on a 15-minute call if it would help.</p>
+</div>
+</div>
+<div>
+<h3 class="sh">Objection 4: “We have our own training programmes for this.”</h3>
+<div class="box box-template">
+<span class="box-label pink">Response</span>
+<p>This is not a training programme in the conventional sense. It is a live application intensive—half the time is spent in the field, applying the methodology to a real industry challenge with real stakeholders who are living the problem.</p>
+<p>The result is a capability that is tested under conditions of genuine uncertainty, with real consequences for getting the analysis wrong. That is fundamentally different from a classroom or workshop setting, and it is why the transfer rate back to live organisational challenges is significantly higher.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BY PROGRAMME -->
+<section class="section section-white" id="archetypes"><span class="tag">Asset 08 · Self-identification</span><h2 class="st">Which character are you?</h2><p class="lead">The Think Wrong book identifies five types of people in every organisation. Knowing which one you are—and which one is approving your request—changes how you make the case and what language you use. The book was written for all five. So is this kit.</p><div class="divider"></div><div class="two-col"><div class="card"><h3 class="sh">The Outlaw—that is probably you</h3><div class="box box-template"><p>The innovators and disruptors who crave open space to explore new possibilities. You are not content with the predictable path. You keep bringing ideas forward and finding them killed by well-meaning Right Thinkers. Think Wrong matters to you because it gives you the language, frameworks, and tools to defend nascent solutions before they get extinguished. The Intensive is for Outlaws who want to build the practice rather than just survive the next encounter with the status quo.</p></div></div><div class="card"><h3 class="sh">The Shepherd—that is probably your manager</h3><div class="box box-template"><p>The caretakers who protect Outlaws from those bent on stopping them. Shepherds provide cover for exploration and help promising solutions reach the organisation without upending everything around them. Think Wrong matters to Shepherds because it gives them the governance language to demarcate where Wrong Thinking is permitted and where Right Thinking is a must. When making the case to your manager, frame the programme as developing a Shepherd capability: you return with a structured discipline, not just enthusiasm.</p></div></div><div class="card"><h3 class="sh">The Scout—you may also be this</h3><div class="box box-template"><p>The guides who help Shepherds and Outlaws navigate uncharted paths and locate resources. Scouts lack ego, toil tirelessly, and go the extra mile to ensure fruitful explorations. They are often hired for their knowledge of new territories. Think Wrong matters to Scouts because it helps them chart the most rewarding course and carry the right equipment. If this is you, the programme returns with a facilitation toolkit: you become the person who can run assumption-testing sessions inside your organisation.</p></div></div><div class="card"><h3 class="sh">The Sheriff—that is probably your L&amp;D team or CFO</h3><div class="box box-template"><p>The peace officers who enforce law and order. Sheriffs make sure everything runs according to plan and that rules are followed. Think Wrong matters to Sheriffs because it helps them demarcate the territories where exploration is permitted and where operational rigour is a must. When making the case to an L&amp;D team or budget approver, use the one-page brief. Sheriffs respond to structure, credential pathways, and measurable commitments on return—all of which are in this kit.</p></div></div></div><div class="box box-roi" style="margin-top:32px;"><span class="box-label ai">The Posse—your colleagues</span><p>Most people in an organisation want a peaceful life. They follow the rules and respond to the hue and cry. But the book notes that Think Wrong matters to Posses too: it clarifies the rightness of their efforts while helping them understand—and even support—the Outlaws marking out the next territory. When you propose the team booking, the Posse members you bring become internal evangelists on return. They are not just participants. They are the people who make the discipline stick inside the organisation after the week is over.</p></div></section><section class="section section-dark" id="programmes">
+<span class="tag">By programme  ·  The specific argument for each</span>
+<h2 class="st">The one paragraph<br/>that makes the case<br/>for each location.</h2>
+<p class="lead">For each programme, one paragraph connecting the industry laboratory to a challenge the participant’s organisation is likely navigating. Use this in the “why this programme specifically” section of the manager email.</p>
+<div class="divider"></div>
+<div class="two-col">
+<div class="card">
+<div class="card-title">Wine—Provence, June 22–26</div>
+<div class="card-body">The Provéncal wine industry is the clearest live example of the pattern underlying any AI deployment, growth bet, or market entry where success has confirmed a premise until it stopped. The vignerons and négociants who meet this group are navigating exactly this structure—making it the most efficient laboratory available for developing the four capabilities and applying them to a live decision on Friday.</div>
+</div>
+<div class="card">
+<div class="card-title">Arts—Paris, June 15–19</div>
+<div class="card-body">The performing arts crisis is the most accessible mirror for the pattern underlying any transformation initiative where excellent execution has continued while the premise went unexamined. The artistic directors and producers who meet this group show what it looks like to answer the wrong version of the challenge with increasing sophistication. The capability built in Paris is directly applicable to the transformation decision the participant is navigating on return.</div>
+</div>
+<div class="card">
+<div class="card-title">Surf—Algarve, Portugal</div>
+<div class="card-body">The surf industry’s tension—growth that depleted the resource the category was built on—mirrors any growth bet or market entry where the premise that enabled early success has become the constraint. The Algarve makes the pattern physical and impossible to intellectualise around. The four capabilities are applied in conditions that make avoidance impossible—which is why they transfer back more reliably.</div>
+</div>
+<div class="card">
+<div class="card-title">Irish Whiskey—Wild Atlantic Way</div>
+<div class="card-body">Forty distilleries making the same capital commitment on one shared, untested assumption is the most instructive live example of what AI deployment decisions, growth bets, and market entry commitments look like when the assumption underneath them is shared, confidently held, and unexamined. If the participant’s organisation is making a significant bet right now, this is the mirror to hold up before the capital commits.</div>
+</div>
+<div class="card">
+<div class="card-title">Automotive—Coventry, UK</div>
+<div class="card-body">The UK automotive sector is solving four simultaneous challenges—EV transition, Chinese entrants, supply chain, identity—with increasing sophistication and improving the execution of the current frame while the frames go unexamined. For any participant navigating simultaneous technology transition, competitive disruption, or transformation pressure, Coventry is the clearest available mirror for the practice of reframing before the capital commits.</div>
+</div>
+<div class="card">
+<div class="card-title">Mobility—Amsterdam</div>
+<div class="card-body">Amsterdam is the only city where two generations of the same long-horizon challenge are simultaneously visible—making it the most effective laboratory available for anyone making infrastructure investment decisions, AI deployment commitments, or long-horizon bets in any sector where the previous solution’s assumptions are now the constraints.</div>
+</div>
+<div class="card">
+<div class="card-title">Drone Warfare—Tallinn</div>
+<div class="card-body">The assumption gap between threat intelligence and operational planning in logistics, energy, urban infrastructure, and financial services is not an awareness problem. It is the specific pattern of untested assumptions that the Ukraine conflict has made undeniable. For any participant whose organisation is making security, resilience, or infrastructure investment decisions right now, Tallinn and NATO CCDCOE access is the most direct available path to classifying which planning assumptions are still sound.</div>
+</div>
+<div class="card" style="border-top-color:var(--ai);">
+<div class="card-title" style="color:rgba(255,255,255,0.9);">Value Building Activator Intensive—no travel required</div>
+<div class="card-body">If the field-based format is not possible for scheduling or budget reasons, the Activator Intensive applies the same four capabilities directly to the participant’s own AI deployment, growth bet, market entry, or transformation initiative—in three days, without travel, at €5,000 per person. The same credential is earned. The same escalation question is answered. Contact </div></div></div></section></body></html>
